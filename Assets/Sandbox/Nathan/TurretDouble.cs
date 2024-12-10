@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class TurretDouble : MonoBehaviour
 {
     private Transform target;
 
@@ -11,6 +11,7 @@ public class Turret : MonoBehaviour
     public float range = 15f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+    private bool firePointAReady = true;
 
     [Header("Unity Setup Fields")]
 
@@ -21,7 +22,8 @@ public class Turret : MonoBehaviour
     public float turnSpeed = 10f;
 
     public GameObject bulletPrefab;
-    public Transform firePoint;
+    public Transform firePointA;
+    public Transform firePointB;
 
 
     void Start(){
@@ -60,16 +62,30 @@ public class Turret : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(Tete.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         Tete.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
-        if(fireCountdown <= 0f){
-            Shoot();
+        if(fireCountdown <= 0f && firePointAReady == true){
+            ShootA();
             fireCountdown = 1f / fireRate;
+            firePointAReady = false;
+        }
+        else if (fireCountdown <= 0f &&firePointAReady == false){
+            ShootB();
+            fireCountdown = 1f / fireRate;
+            firePointAReady = true;
         }
 
         fireCountdown -= Time.deltaTime;
     }
 
-    void Shoot(){
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    void ShootA(){
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePointA.position, firePointA.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+        if(bullet != null)
+            bullet.Seek(target);
+    }
+
+    void ShootB(){
+        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePointB.position, firePointB.rotation);
         Bullet bullet = bulletGO.GetComponent<Bullet>();
 
         if(bullet != null)
