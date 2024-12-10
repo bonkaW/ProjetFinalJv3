@@ -1,15 +1,11 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class BulletRoche : MonoBehaviour
 {
     private Transform target;
 
     public float speed = 10f;
     public GameObject impactEffect;
-
-    // Pour faire tourner le projectile
-    public Transform Fleche;
-    public float turnSpeed = 5f;
 
     public void Seek (Transform _target)
     {
@@ -26,11 +22,6 @@ public class Bullet : MonoBehaviour
 
         Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
-
-        // Pour faire tourner le projectile
-        Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = Quaternion.Lerp(Fleche.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
-        Fleche.rotation = Quaternion.Euler(rotation.z, rotation.y, rotation.z);
 
         if(dir.magnitude <= distanceThisFrame){
             HitTarget();
