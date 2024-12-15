@@ -11302,7 +11302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SendPointerHoverToParent: 1
   _useInitialPressPositionForDrag: 1
-  _exclusiveMode: 0
+  _exclusiveMode: 1
 --- !u!114 &910238347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11317,7 +11317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 50
+  m_DragThreshold: 10
 --- !u!1 &911290018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: 126d619cf4daa52469682f85c1378b4a,
