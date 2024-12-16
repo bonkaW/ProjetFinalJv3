@@ -36,6 +36,10 @@ public class SpawnTower : MonoBehaviour
     private MRUKRoom room; // R�f�rence � la pi�ce actuelle d�tect�e par MRUK
     private Vector3 hitPoint; // Point d'impact du rayon
 
+    private GoldManager goldmanager;
+
+    private int towerCost;
+
     private void Start()
     {
         // Initialisation : r�cup�ration de la pi�ce actuelle
@@ -43,6 +47,23 @@ public class SpawnTower : MonoBehaviour
 
         // Configurer la visibilit� du texte du Gizmo
         gizmoLabelText.enabled = showGizmoLabelText;
+
+        goldmanager = FindObjectOfType<GoldManager>();
+        if (goldmanager == null)
+        {
+
+            Debug.LogError("GoldManager not found in the scene!");
+        }
+
+        if (towerPrefab == null)
+        {
+            Debug.LogError("No tower prefab assigned");
+        }
+        else
+        {
+            Debug.Log($"Tower prefab selected: {towerPrefab.name}, Cost: {towerCost}");
+        }
+
     }
 
     private void Update()
@@ -115,12 +136,12 @@ public class SpawnTower : MonoBehaviour
         // V�rifier si l'angle est dans la plage accept�e
         if (rotationXGizmo >= minAngle && rotationXGizmo <= maxAngle)
         {
-            Debug.LogWarning("L'objet pointe vers le ciel !");
+            //Debug.LogWarning("L'objet pointe vers le ciel !");
             return true;
         }
         else
         {
-            Debug.LogWarning("L'objet ne pointe pas vers le ciel.");
+            //Debug.LogWarning("L'objet ne pointe pas vers le ciel.");
             return false;
         }
     }
@@ -134,8 +155,29 @@ public class SpawnTower : MonoBehaviour
         // V�rifier si le bouton de cr�ation de tour est press�
         if (OVRInput.GetDown(spawnButton, controller))
         {
-            Instantiate(towerPrefab, hitPoint, Quaternion.identity);
+            if (towerPrefab == null)
+            {
+                Debug.LogError("invalid tower index selected. ");
+                return;
+            }
+
+            if (goldmanager != null && goldmanager.GetCurrentGold() >= towerCost)
+            {
+
+                goldmanager.SpendGold(towerCost);
+                Instantiate(towerPrefab, hitPoint, Quaternion.identity);
+                Debug.Log($"Tower placed! {towerCost} gold deducted");
+            }
+            else
+            {
+                Debug.LogWarning("Not enough gold to place this tower.");
+            }
         }
+    }
+
+    public void SetTowerCost(int cost)
+    {
+        towerCost = cost;
     }
 }
 

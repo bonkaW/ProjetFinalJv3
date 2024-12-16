@@ -22,13 +22,41 @@ public class GoldManager : MonoBehaviour
         while(true){
 
             yield return new WaitForSeconds(1);
-
-            currentGold++;
-
-            UpdateGoldUI();
+            Addgold(1);
 
         }
 
+    }
+
+    public void Addgold(int amount)
+    {
+
+        currentGold += amount;
+        UpdateGoldUI();
+
+    }
+
+    public int GetCurrentGold()
+    {
+        return currentGold;
+    }
+
+    public bool SpendGold(int amount)
+    {
+        if (currentGold >= amount)
+        {
+
+            currentGold -= amount;
+            UpdateGoldUI();
+            return true;
+
+        }
+        else {
+
+            Debug.LogWarning("Not enough gold!");
+            return false;
+
+        }
     }
 
     private void UpdateGoldUI(){
