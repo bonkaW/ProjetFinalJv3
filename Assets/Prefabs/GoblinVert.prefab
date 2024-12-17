@@ -676,6 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8281359095916046227}
+  - component: {fileID: 1576519434083335243}
   m_Layer: 0
   m_Name: GoblinVert
   m_TagString: Enemy
@@ -702,6 +703,19 @@ Transform:
   - {fileID: 4441068589441942887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1576519434083335243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121038736892921980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68c826001f13f48bd70172929381f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveSpawner: {fileID: 0}
 --- !u!1 &3297360282204651235
 GameObject:
   m_ObjectHideFlags: 0
