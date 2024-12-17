@@ -10274,7 +10274,7 @@ GameObject:
   - component: {fileID: 5357733698634309817}
   m_Layer: 0
   m_Name: BelierAvecSoldats
-  m_TagString: Enemy
+  m_TagString: EnemyBig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

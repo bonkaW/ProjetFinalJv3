@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 1.5
   fireRate: 0.75
-  enemyTag: Enemy
+  enemyTag: EnemyBig
   Tete: {fileID: 6915457941659526478}
   turnSpeed: 10
   bulletPrefab: {fileID: 3742831304173590567, guid: 700b07de75dbb8f4a8c96d84b3a3a2f6,

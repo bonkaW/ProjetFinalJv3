@@ -26,6 +26,9 @@ TagManager:
   - QDSUIToggleCheckboxRadio
   - QDSUISection
   - Enemy
+  - ProjectileFleche
+  - ProjectileRoche
+  - EnemyBig
   layers:
   - Default
   - TransparentFX

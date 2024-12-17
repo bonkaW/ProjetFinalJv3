@@ -14,7 +14,7 @@ public class TurretCatapulte : MonoBehaviour
 
     [Header("Unity Setup Fields")]
 
-    public string enemyTag = "Enemy";
+    public string enemyTag = "EnemyBig";
 
     // Pour faire tourner la tourelle
     public Transform Tete;

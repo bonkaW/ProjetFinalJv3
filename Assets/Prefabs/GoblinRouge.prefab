@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 3659294723997061914}
   m_Layer: 0
   m_Name: GoblinRouge
-  m_TagString: Enemy
+  m_TagString: EnemyBig
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

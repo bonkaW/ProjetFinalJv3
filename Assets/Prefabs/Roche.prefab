@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1343343197321531391}
   m_Layer: 0
   m_Name: Roche
-  m_TagString: Untagged
+  m_TagString: ProjectileRoche
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

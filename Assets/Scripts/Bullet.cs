@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
 
-        //Destroy(target.gameObject); //Temporaire pour détruire l'ennemi
+        Destroy(target.gameObject); //Temporaire pour détruire l'ennemi
         Destroy(gameObject);
     }
 }
