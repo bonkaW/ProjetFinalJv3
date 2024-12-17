@@ -29,6 +29,7 @@ TagManager:
   - ProjectileFleche
   - ProjectileRoche
   - EnemyBig
+  - Chateau
   layers:
   - Default
   - TransparentFX
