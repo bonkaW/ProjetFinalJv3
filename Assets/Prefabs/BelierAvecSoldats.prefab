@@ -10272,6 +10272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5357733698634309817}
+  - component: {fileID: 7772279194223597202}
   m_Layer: 0
   m_Name: BelierAvecSoldats
   m_TagString: EnemyBig
@@ -10299,6 +10300,27 @@ Transform:
   - {fileID: 6722136476588845752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7772279194223597202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6535689878632147950}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.756692, y: 2.539225, z: 3.6575868}
+  m_Center: {x: -1.8783468, y: -0.10999344, z: -0.06176725}
 --- !u!1 &6581374621422098245
 GameObject:
   m_ObjectHideFlags: 0

@@ -116,6 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3659294723997061914}
+  - component: {fileID: 866772992981171842}
   m_Layer: 0
   m_Name: GoblinRouge
   m_TagString: EnemyBig
@@ -142,6 +143,27 @@ Transform:
   - {fileID: 5022198823573392501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &866772992981171842
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355976484857689818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9211858, y: 2.0838368, z: 0.8417635}
+  m_Center: {x: 0.4162693, y: 0.18612066, z: 0.07911826}
 --- !u!1 &853447280791111635
 GameObject:
   m_ObjectHideFlags: 0
