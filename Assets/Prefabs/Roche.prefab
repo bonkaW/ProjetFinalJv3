@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1343343197321531391}
   m_Layer: 0
   m_Name: Roche
-  m_TagString: Untagged
+  m_TagString: ProjectileRoche
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2255184, y: 0.2255184, z: 0.2255184}
+  m_LocalScale: {x: 0.04255184, y: 0.04255184, z: 0.04255184}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
