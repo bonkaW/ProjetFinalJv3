@@ -19,6 +19,9 @@ public class WaveSpawner : MonoBehaviour
     public MRUKAnchor.SceneLabels spawnLabels;
     public float minEdgeDistance = 0.3f;
 
+    public AudioSource audioSource;
+    public AudioClip victoryClip;
+
 
     // public Transform spawnPoint;
     
@@ -59,6 +62,10 @@ public class WaveSpawner : MonoBehaviour
         if(waveNumber == waves.Length ){
 
             //FIN DE NIVEAU (UI OU SKIP AU PROCHAIN NIVEAU)
+
+            
+            audioSource.PlayOneShot(victoryClip);
+            
 
             Debug.Log("LEVEL WON!");
             this.enabled = false;
