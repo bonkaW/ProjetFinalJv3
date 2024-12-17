@@ -6,6 +6,8 @@ using TMPro;
 
 public class GoldManager : MonoBehaviour
 {
+
+    [SerializeField] private InfosJoueur _infosJoueur;
     
     public TextMeshProUGUI goldText; //Reference a l'element UI txt
     private int currentGold = 0; // montant de gold de base
@@ -13,6 +15,8 @@ public class GoldManager : MonoBehaviour
 
     void Start(){
 
+        currentGold = _infosJoueur.nbGold;
+        UpdateGoldUI();
         StartCoroutine(AddGoldOverTime());
 
     }
@@ -32,6 +36,7 @@ public class GoldManager : MonoBehaviour
     {
 
         currentGold += amount;
+        _infosJoueur.nbGold = currentGold;
         UpdateGoldUI();
 
     }
@@ -47,7 +52,10 @@ public class GoldManager : MonoBehaviour
         {
 
             currentGold -= amount;
+            _infosJoueur.nbGold = currentGold;
             UpdateGoldUI();
+
+            Debug.Log("Gold after spending in ScriptableObject: " + _infosJoueur.nbGold);
             return true;
 
         }
