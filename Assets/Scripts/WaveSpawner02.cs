@@ -4,7 +4,7 @@ using UnityEngine;
 using Meta.XR.MRUtilityKit;
 using UnityEngine.SceneManagement;
 
-public class WaveSpawner : MonoBehaviour
+public class WaveSpawner02 : MonoBehaviour
 {
 
 
@@ -71,7 +71,7 @@ public class WaveSpawner : MonoBehaviour
             Debug.Log("LEVEL WON!");
             this.enabled = false;
 
-            SceneManager.LoadScene("Niveau02");
+            SceneManager.LoadScene("Fin");
 
         }
 

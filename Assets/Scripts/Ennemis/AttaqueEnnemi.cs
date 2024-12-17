@@ -25,6 +25,7 @@ public class AttaqueEnnemi : MonoBehaviour
         if(other.gameObject.CompareTag("Chateau")){
             Debug.Log("Touché!");
             Destroy(gameObject);
+            WaveSpawner.EnemiesAlive--;
             _infosJoueur.nbVies -=1;
             Debug.Log("J'ai " + _infosJoueur.nbVies + " vies.");
             //_vies[_compteurVies].SetActive(false);

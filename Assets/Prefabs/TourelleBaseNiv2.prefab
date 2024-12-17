@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 287966b5ef68588449e3d9f723d79f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 2.5
   fireRate: 1
   enemyTag: Enemy
   Tete: {fileID: 5722377507925202540}
