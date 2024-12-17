@@ -3362,6 +3362,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5297232920567753759}
   - component: {fileID: 345703050811666065}
+  - component: {fileID: 4278626051411120761}
+  - component: {fileID: 4635971230884745804}
+  - component: {fileID: 2940794563958874022}
   m_Layer: 0
   m_Name: GoblinShaman
   m_TagString: Enemy
@@ -3410,6 +3413,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0292242, y: 1.4368563, z: 0.90725565}
   m_Center: {x: 0.43539035, y: -0.038059473, z: 0.080873966}
+--- !u!114 &4278626051411120761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149230027980116796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632115e3aa7d04b4da565752d834f84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infosJoueur: {fileID: 11400000, guid: bfab5f7cd0972814681c6f4578326507, type: 2}
+--- !u!114 &4635971230884745804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149230027980116796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a47e0170f64c1e438732e493339ee23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chateau: {fileID: 7038993466834319114, guid: 08ffbc37a2936c84a82bebf7cd94f132, type: 3}
+  agent: {fileID: 0}
+  speed: 1
+--- !u!195 &2940794563958874022
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149230027980116796}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7887504545905231931
 GameObject:
   m_ObjectHideFlags: 0

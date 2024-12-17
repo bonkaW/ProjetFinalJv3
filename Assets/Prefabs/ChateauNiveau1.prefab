@@ -1192,7 +1192,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7059,7 +7059,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1881028961610447367}
-  - component: {fileID: 5082401000668718431}
   m_Layer: 0
   m_Name: ChateauNiveau1
   m_TagString: Chateau
@@ -7083,19 +7082,6 @@ Transform:
   - {fileID: 6038884839933035503}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5082401000668718431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3599790266239507660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632115e3aa7d04b4da565752d834f84e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _infosJoueur: {fileID: 0}
 --- !u!1 &3606003129153648600
 GameObject:
   m_ObjectHideFlags: 0

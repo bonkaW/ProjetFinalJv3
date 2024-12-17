@@ -677,6 +677,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8281359095916046227}
   - component: {fileID: 823430433315049378}
+  - component: {fileID: 6656608111945566771}
+  - component: {fileID: 1552464362968819258}
+  - component: {fileID: 5018631698193988371}
   m_Layer: 0
   m_Name: GoblinVert
   m_TagString: Enemy
@@ -724,6 +727,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0068855, y: 1.2845664, z: 0.85825825}
   m_Center: {x: 0.42460442, y: -0.058288336, z: 0.0373863}
+--- !u!114 &6656608111945566771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121038736892921980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632115e3aa7d04b4da565752d834f84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _infosJoueur: {fileID: 11400000, guid: bfab5f7cd0972814681c6f4578326507, type: 2}
+--- !u!114 &1552464362968819258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121038736892921980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a47e0170f64c1e438732e493339ee23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chateau: {fileID: 7038993466834319114, guid: 08ffbc37a2936c84a82bebf7cd94f132, type: 3}
+  agent: {fileID: 0}
+  speed: 1
+--- !u!195 &5018631698193988371
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121038736892921980}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3297360282204651235
 GameObject:
   m_ObjectHideFlags: 0

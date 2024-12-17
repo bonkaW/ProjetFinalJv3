@@ -21,17 +21,9 @@ public class AttaqueEnnemi : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other){
-        if(other.gameObject.CompareTag("Enemy")){
-            
-            _infosJoueur.nbVies -=1;
-            //_vies[_compteurVies].SetActive(false);
-            //_compteurVies -=1;
-            Debug.Log("J'ai " + _infosJoueur.nbVies + " vies.");
-        }
-
-        if(other.gameObject.CompareTag("EnemyBig")){
-            Destroy(other.gameObject); 
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("Chateau")){
+            Destroy(gameObject);
             _infosJoueur.nbVies -=1;
             //_vies[_compteurVies].SetActive(false);
             //_compteurVies -=1;

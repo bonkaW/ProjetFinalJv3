@@ -284,6 +284,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401780069469786277, guid: 08ffbc37a2936c84a82bebf7cd94f132,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4401780069469786277, guid: 08ffbc37a2936c84a82bebf7cd94f132,
+        type: 3}
       propertyPath: _infosJoueur
       value: 
       objectReference: {fileID: 11400000, guid: bfab5f7cd0972814681c6f4578326507,
@@ -306,6 +311,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 823430433315049378, guid: 020ab99443b87994d8fa654af82639ee,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1552464362968819258, guid: 020ab99443b87994d8fa654af82639ee,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
     - target: {fileID: 3121038736892921980, guid: 020ab99443b87994d8fa654af82639ee,
         type: 3}
       propertyPath: m_Name
@@ -374,6 +389,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1613327516827094158, guid: 40391601339ca13499fdee2d3943de42,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
+    - target: {fileID: 3767004756903306029, guid: 40391601339ca13499fdee2d3943de42,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5810985727445783043, guid: 40391601339ca13499fdee2d3943de42,
         type: 3}
       propertyPath: m_Name
@@ -716,6 +741,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: General
       objectReference: {fileID: 0}
+    - target: {fileID: 6079285052462136220, guid: a3ef252982f6abc4a96c37ea15365199,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
+    - target: {fileID: 7928083512858909850, guid: a3ef252982f6abc4a96c37ea15365199,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8599021253188692487, guid: a3ef252982f6abc4a96c37ea15365199,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -844,13 +879,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChateauNiveau1
       objectReference: {fileID: 0}
-    - target: {fileID: 5082401000668718431, guid: 74799f19dc11c324ba6bfe579f05131b,
+    - target: {fileID: 8419670669234247019, guid: 74799f19dc11c324ba6bfe579f05131b,
         type: 3}
-      propertyPath: _infosJoueur
-      value: 
-      objectReference: {fileID: 11400000, guid: bfab5f7cd0972814681c6f4578326507,
-        type: 2}
-    m_RemovedComponents: []
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -863,6 +898,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 345703050811666065, guid: 9cab65bc6bc5f9243a3e740974f219e9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635971230884745804, guid: 9cab65bc6bc5f9243a3e740974f219e9,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
     - target: {fileID: 5297232920567753759, guid: 9cab65bc6bc5f9243a3e740974f219e9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -923,6 +968,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cab65bc6bc5f9243a3e740974f219e9, type: 3}
+--- !u!1 &2031576621 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3599790266239507660, guid: 74799f19dc11c324ba6bfe579f05131b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1367518368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2049277285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -931,6 +982,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3646599922580272806, guid: 9a22c9360cd6c084d99ee610ba9b441b,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
     - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -945,26 +1001,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 4.643551
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5357733698634309817, guid: 9a22c9360cd6c084d99ee610ba9b441b,
         type: 3}
@@ -986,6 +1022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BelierAvecSoldats
       objectReference: {fileID: 0}
+    - target: {fileID: 7772279194223597202, guid: 9a22c9360cd6c084d99ee610ba9b441b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -999,10 +1040,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 144257639540228560, guid: c03c53cfc8b07a04eb7397272e5b181d,
+        type: 3}
+      propertyPath: chateau
+      value: 
+      objectReference: {fileID: 2031576621}
     - target: {fileID: 355976484857689818, guid: c03c53cfc8b07a04eb7397272e5b181d,
         type: 3}
       propertyPath: m_Name
       value: GoblinRouge
+      objectReference: {fileID: 0}
+    - target: {fileID: 866772992981171842, guid: c03c53cfc8b07a04eb7397272e5b181d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3659294723997061914, guid: c03c53cfc8b07a04eb7397272e5b181d,
         type: 3}
