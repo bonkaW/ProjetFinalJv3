@@ -16,6 +16,7 @@ public class spawner : MonoBehaviour
     public MRUKAnchor.SceneLabels spawnLabels;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +27,7 @@ public class spawner : MonoBehaviour
     void Update()
     {
 
-        if(!MRUK.Instance && !MRUK.Instance.IsInitialized)
+        if (!MRUK.Instance && !MRUK.Instance.IsInitialized)
             return;
 
         timer += Time.deltaTime;
@@ -43,11 +44,13 @@ public class spawner : MonoBehaviour
 
         MRUKRoom room = MRUK.Instance.GetCurrentRoom();
 
+
         room.GenerateRandomPositionOnSurface(MRUK.SurfaceType.VERTICAL, minEdgeDistance, LabelFilter.Included(spawnLabels), out Vector3 pos, out Vector3 norm);
 
         Vector3 randomPosition = Random.insideUnitSphere * 3;
         randomPosition.y = 0;
 
         Instantiate(prefabToSpawn, randomPosition, Quaternion.identity);
+
     }
 }
