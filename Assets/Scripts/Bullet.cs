@@ -50,6 +50,8 @@ public class Bullet : MonoBehaviour
         Destroy(target.gameObject); //Temporaire pour détruire l'ennemi
         Destroy(gameObject);
 
+        WaveSpawner.EnemiesAlive--;
+
         GoldManager goldManager = FindObjectOfType<GoldManager>();
         if (goldManager != null)
         {
