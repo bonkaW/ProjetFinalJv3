@@ -11,9 +11,16 @@ public class GoldManager : MonoBehaviour
     
     public TextMeshProUGUI goldText; //Reference a l'element UI txt
     private int currentGold = 0; // montant de gold de base
+    private bool isNewGame = true;
 
 
     void Start(){
+
+        if (isNewGame)
+        {
+            _infosJoueur.nbGold = 0;
+            isNewGame = false;
+        }
 
         currentGold = _infosJoueur.nbGold;
         UpdateGoldUI();
