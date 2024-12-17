@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     public Transform Fleche;
     public float turnSpeed = 5f;
 
-    public void Seek (Transform _target)
+    public void Seek(Transform _target)
     {
         target = _target;
     }
@@ -19,7 +19,8 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target == null){
+        if (target == null)
+        {
             Destroy(gameObject);
             return;
         }
@@ -32,7 +33,8 @@ public class Bullet : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(Fleche.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         Fleche.rotation = Quaternion.Euler(rotation.z, rotation.y, rotation.z);
 
-        if(dir.magnitude <= distanceThisFrame){
+        if (dir.magnitude <= distanceThisFrame)
+        {
             HitTarget();
             return;
         }
@@ -40,11 +42,19 @@ public class Bullet : MonoBehaviour
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
     }
 
-    void HitTarget(){
+    void HitTarget()
+    {
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
 
         Destroy(target.gameObject); //Temporaire pour détruire l'ennemi
         Destroy(gameObject);
+
+        GoldManager goldManager = FindObjectOfType<GoldManager>();
+        if (goldManager != null)
+        {
+            int goldReward = 2;
+            goldManager.Addgold(goldReward);
+        }
     }
 }

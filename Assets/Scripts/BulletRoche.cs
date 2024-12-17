@@ -37,5 +37,12 @@ public class BulletRoche : MonoBehaviour
 
         Destroy(target.gameObject); //Temporaire pour détruire l'ennemi
         Destroy(gameObject);
+
+        GoldManager goldManager = FindObjectOfType<GoldManager>();
+        if (goldManager != null)
+        {
+            int goldReward = 5;
+            goldManager.Addgold(goldReward);
+        }
     }
 }
