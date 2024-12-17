@@ -92193,7 +92193,7 @@ GameObject:
   - component: {fileID: 3537959421028392616}
   m_Layer: 0
   m_Name: ChateauNiveau2
-  m_TagString: Untagged
+  m_TagString: Chateau
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92208,8 +92208,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.68, y: 17.118, z: 29.97}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8355845525294726259}
   - {fileID: 4137264734688161104}
